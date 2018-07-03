@@ -9,11 +9,11 @@ const path = require('path');
 module.exports = {
     entry: './test/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         filename: 'main.js'
     },
     devServer: {
-        contentBase : path.join(__dirname, "dist"),
+        contentBase : path.join(__dirname, "docs"),
         compress    : true,
         port        : 3000,
         open        : true,
