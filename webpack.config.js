@@ -9,11 +9,11 @@ const path = require('path');
 module.exports = {
     entry: './test/index.js',
     output: {
-        path: path.resolve(__dirname, ''),
-        filename: 'dist/main.js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'main.js'
     },
     devServer: {
-        contentBase : path.join(__dirname, ''),
+        contentBase : path.join(__dirname, 'dist'),
         compress    : true,
         port        : 3000,
         open        : true,
@@ -64,7 +64,7 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin({
             filename:  (getPath) => {
-                return getPath('dist/[name].css').replace('css/js', 'css');
+                return getPath('[name].css').replace('css/js', 'css');
             },
             allChunks: true
         }),
