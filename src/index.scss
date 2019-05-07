@@ -1,14 +1,14 @@
 // El numero de columnas se define en las clases del html
 $max-grid-columns : 6 !default;
    
-.masonry-grid{
+.MasonryGrid{
     --columns: 1;
     --gap: 1rem;
     display: grid;
     grid-template-columns: repeat(var(--columns),1fr);
     grid-gap: var(--gap);
 
-    &__item{
+    &-item{
         margin-bottom: var(--gap);
     }
 }

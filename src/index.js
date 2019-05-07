@@ -17,7 +17,7 @@ const masonryLayout = (container, itmes, columns) => {
     }
 }
 
-const Masonry = (classContainer='.masonry-grid', classItems='.masonry-grid__item')=>{
+const Masonry = (classContainer='.MasonryGrid', classItems='.MasonryGrid-item')=>{
     let masonryContainers = [...document.querySelectorAll(classContainer)];
     if(masonryContainers){
         masonryContainers.map(container => {
